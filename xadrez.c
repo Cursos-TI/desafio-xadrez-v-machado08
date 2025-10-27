@@ -1,12 +1,65 @@
 #include <stdio.h>
 
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
+// Desafio de Xadrez - Vitor Machado dos Santos
+
 
 int main() {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
+
+    int torre;
+    // o bloco abaixo mostra ao usuário como funcionará a movimentação da torre
+    printf("Movimentando as peças de xadrez !\n");
+    printf("A TORRE move-se em linha vertical ou horizontal, por favor escolha a direção do movimento da torre:\n");
+    printf("(Direita, esquerda, frente ou trás)\n)");
+
+    // cria o menu que solicita ao usuário a direção que gostaria de movimentar a torre
+    printf("********** Escolha a direção que você gostaria de movimentar a torre*********\n");
+    printf("1- DIREITA\n");
+    printf("2- ESQUERDA\n");
+    printf("3- FRENTE\n");
+    printf("4- TRÁS\n");
+    scanf("%d", &torre);
+
+    switch (torre)
+    {
+        case 1:
+            for (int i = 0; i < 5; i++ ){   // caso o usuário escolha a opção "DIREITA" para movimentar a torre
+            printf("DIREITA\n");
+        }
+        break;
+
+
+        case 2:
+            for (int i = 0; i < 5; i++ ){  // caso o usuário escolha a opção "ESQUERDA" para movimentar a torre
+            printf("ESQUERDA\n");
+         }
+         break;
+
+
+         case 3:
+            for (int i = 0; i < 5; i++ ){  // caso o usuário escolha a opção "FRENTE" para movimentar a torre
+            printf("FRENTE\n");
+         }
+         break;
+
+        case 4:
+            for (int i = 0; i < 5; i++ ){  // caso o usuário escolha a opção "TRÁS" para movimentar a torre
+            printf("TRÁS\n");
+            }
+            break;
+
+
+            default:
+            printf("Opção Inválida\n"); // caso o usuário escolha uma opção inválida (fora de 1 a 4)
+            break;
+        }
+
+    return 0;
+
+
+
+
+        
+    }
 
     // Implementação de Movimentação do Bispo
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
