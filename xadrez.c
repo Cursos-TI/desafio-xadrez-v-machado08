@@ -4,7 +4,7 @@
 
 
 int main() {
-
+    //Variaveis abaixo
     int torre;
     int bispo, w1=0;
     int rainha, r1=0;
@@ -22,7 +22,7 @@ int main() {
     printf("2- ESQUERDA\n");
     printf("3- FRENTE\n");
     printf("4- TRÁS\n");
-    scanf("%d", &torre);
+    scanf("%d", &torre);// solicita que usuario escolha de 1 a 4
 
     switch (torre)
     {
@@ -118,7 +118,7 @@ int main() {
     printf("6- ESQUERDA\n");
     printf("7- FRENTE\n");
     printf("8- TRÁS\n");
-    scanf("%d", &rainha);
+    scanf("%d", &rainha);// solciita que o usuário escolha de 1 a 8
 
     switch (rainha) {
         case 1:
@@ -211,10 +211,11 @@ int main() {
     printf("8- ESQUERDA, ESQUERDA, BAIXO\n");
     printf("9- BAIXO, BAIXO, DIREITA\n");
     printf("10- BAIXO, BAIXO, ESQUERDA\n");
-    scanf("%d", &cavalo);
+    scanf("%d", &cavalo);//solicita que usuário escolha de 1a 10
 
     switch (cavalo) {
 
+        // caso o usuário escolha a opção 1 (CIMA, CIMA, DIREITA)
         case 1:
             while (c1 -- ) {
                 for (int i =0; i < 2; i++ ){
@@ -226,7 +227,7 @@ int main() {
         
         break;
 
-
+        // caso o usuário escolha a opção 2 (CIMA, CIMA, ESQUERDA)
         case 2:
             while (c1 -- ) {
                 for (int i =0; i < 2; i++ ){
@@ -239,7 +240,7 @@ int main() {
         break;
 
 
-
+        // caso o usuário escolha a opção 3 (BAIXO, BAIXO, DIREITA)
         case 3:
             while (c1 -- ) {
                 for (int i =0; i < 2; i++ ){
@@ -250,7 +251,7 @@ int main() {
             printf("DIREITA\n");}
         break;
 
-
+        // caso o usuário escolha a opção 4 (BAIXO, BAIXO, ESQUERDA)
         case 4:
             while (c1 -- ) {
                 for (int i =0; i < 2; i++ ){
@@ -261,7 +262,7 @@ int main() {
             printf("ESQUERDA\n");}
         break;
 
-
+        // caso o usuário escolha a opção 5 (DIREITA, DIREITA, CIMA)
          case 5:
             while (c1 -- ) {
                 for (int i =0; i < 2; i++ ){
@@ -272,7 +273,7 @@ int main() {
             printf("CIMA\n");}
         break;
 
-
+        // caso o usuário escolha a opção 6 (DIREITA, DIREITA, BAIXO)
         case 6:
             while (c1 -- ) {
                 for (int i =0; i < 2; i++ ){
@@ -283,7 +284,7 @@ int main() {
             printf("BAIXO\n");}
         break;
 
-
+        // caso o usuário escolha a opção 7 (ESQUERDA, ESQUERDA, CIMA)
         case 7:
             while (c1 -- ) {
                 for (int i =0; i < 2; i++ ){
@@ -294,7 +295,7 @@ int main() {
             printf("CIMA\n");}
         break;
 
-
+        // caso o usuário escolha a opção 8 (ESQUERDA, ESQUERDA, BAIXO)
         case 8:
             while (c1 -- ) {
                 for (int i =0; i < 2; i++ ){
@@ -305,7 +306,7 @@ int main() {
             printf("BAIXO\n");}
         break;
 
-
+        // caso o usuário escolha a opção 9 (BAIXO, BAIXO, DIREITA)
         case 9:
             while (c1 -- ) {
                 for (int i =0; i < 2; i++ ){
@@ -316,7 +317,7 @@ int main() {
             printf("DIREITA\n");};
         break;
 
-
+        // caso o usuário escolha a opção 10 (BAIXO, BAIXO, ESQUERDA)
         case 10:
             while (c1 -- ) {
                 for (int i =0; i < 2; i++ ){
