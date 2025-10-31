@@ -1,13 +1,23 @@
 #include <stdio.h>
 
-// Desafio de Xadrez - Vitor Machado dos Santos
+void movimento(char *direcao){
+    for (int i = 0; i < 5; i++ ){
+    printf("%s\n", direcao);
+    }
+}
+
+void movimentoRainha(char *direcao){
+    for (int i = 0; i < 8; i++ ){
+        printf("%s\n", direcao);
+    }
+}
 
 
 int main() {
-    //Variaveis abaixo
+
     int torre;
-    int bispo, w1=0;
-    int rainha, r1=0;
+    int bispo; 
+    int rainha;
     int cavalo, c1=1;
     // o bloco abaixo mostra ao usuário como funcionará a movimentação da torre
     printf("Movimentando as peças de xadrez !\n");
@@ -22,36 +32,25 @@ int main() {
     printf("2- ESQUERDA\n");
     printf("3- FRENTE\n");
     printf("4- TRÁS\n");
-    scanf("%d", &torre);// solicita que usuario escolha de 1 a 4
+    scanf("%d", &torre);
 
     switch (torre)
     {
         case 1:
-            for (int i = 0; i < 5; i++ ){   // caso o usuário escolha a opção "DIREITA" para movimentar a torre
-            printf("DIREITA\n");
-        }
-        break;
-
+            movimento ("DIREITA"); // caso o usuário escolha a opção "DIREITA" para movimentar a torre
+            break; 
 
         case 2:
-            for (int i = 0; i < 5; i++ ){  // caso o usuário escolha a opção "ESQUERDA" para movimentar a torre
-            printf("ESQUERDA\n");
-         }
-         break;
-
-
-         case 3:
-            for (int i = 0; i < 5; i++ ){  // caso o usuário escolha a opção "FRENTE" para movimentar a torre
-            printf("FRENTE\n");
-         }
-         break;
-
-        case 4:
-            for (int i = 0; i < 5; i++ ){  // caso o usuário escolha a opção "TRÁS" para movimentar a torre
-            printf("TRÁS\n");
-            }
+            movimento ("ESQUERDA");  // caso o usuário escolha a opção "ESQUERDA" para movimentar a torre
             break;
 
+         case 3:
+            movimento ("FRENTE"); // caso o usuário escolha a opção "FRENTE" para movimentar a torre
+            break;
+
+        case 4:
+            movimento ("TRÁS"); // caso o usuário escolha a opção "TRÁS" para movimentar a torre
+            break;
 
             default:
             printf("Opção Inválida\n"); // caso o usuário escolha uma opção inválida (fora de 1 a 4)
@@ -71,33 +70,19 @@ int main() {
     switch (bispo) {
 
         case 1:
-        while (w1 <= 4 ) {
-            printf("CIMA, DIREITA\n"); // caso usuario movimente para diagonal direita superior
-            w1++;
-        }
+        movimento ("CIMA, DIREITA");// caso usuario movimente para diagonal direita superior
         break;
 
-
         case 2:
-        while (w1 <= 4 ) {
-            printf("CIMA, ESQUERDA\n");// caso usuario movimente para diagonal esquerda superior
-            w1++;
-        }
+        movimento ("CIMA, ESQUERDA");// caso usuario movimente para diagonal esquerda superior
         break;
 
         case 3:
-        while (w1 <= 4 ) {
-            printf("BAIXO, DIREITA\n");// caso usuario movimente para diagonal direita inferior
-            w1++;
-        }
+        movimento ("BAIXO, DIREITA");// caso usuario movimente para diagonal direita inferior
         break;
 
-
         case 4:
-        while (w1 <= 4 ) {
-            printf("BAIXO, ESQUERDA\n");// caso usuario movimente para diagonal esquerda inferior
-            w1++;
-        }
+        movimento ("BAIXO, ESQUERDA"); // caso usuario movimente para diagonal esquerda inferior
         break;
 
         default:
@@ -118,78 +103,46 @@ int main() {
     printf("6- ESQUERDA\n");
     printf("7- FRENTE\n");
     printf("8- TRÁS\n");
-    scanf("%d", &rainha);// solciita que o usuário escolha de 1 a 8
+    scanf("%d", &rainha);
 
     switch (rainha) {
         case 1:
-        do{
-            printf("CIMA, DIREITA\n");// caso usuario movimente para diagonal direita superior
-            r1++;
-        } while (r1 <8);
-
+        movimentoRainha ("CIMA, DIREITA");// caso usuario movimente para diagonal direita superior
         break;
 
 
         case 2:
-         do{
-            printf("CIMA, ESQUERDA\n");// caso usuario movimente para diagonal esquerda superior
-            r1++;
-        } while (r1 <8);
-
+        movimentoRainha ("CIMA, ESQUERDA");// caso usuario movimente para diagonal esquerda superior
         break;
 
 
         case 3:
-        do{
-            printf("BAIXO, DIREITA\n");// caso usuario movimente para diagonal direita inferior
-            r1++;
-        } while (r1 <8);
-
+        movimentoRainha ("BAIXO, DIREITA");// caso usuario movimente para diagonal direita inferior
         break;
 
 
         case 4:
-        do{
-            printf("BAIXO, ESQUERDA\n");// caso usuario movimente para diagonal esquerda inferior
-            r1++;
-        } while (r1 <8);
-
+        movimentoRainha ("BAIXO, ESQUERDA");// caso usuario movimente para diagonal esquerda inferior
         break;
 
 
         case 5:
-        do{
-            printf("DIREITA\n"); // caso o usuário escolha a opção "DIREITA" para movimentar a rainha
-            r1++;
-        } while (r1 <8);
-
+        movimentoRainha ("DIREITA"); // caso o usuário escolha a opção "DIREITA" para movimentar a rainha
         break;
 
 
         case 6:
-        do{
-            printf("ESQUERDA\n");// caso o usuário escolha a opção "ESQUERDA" para movimentar a rainha
-            r1++;
-        } while (r1 <8);
-
+        movimentoRainha("ESQUERDA");// caso o usuário escolha a opção "ESQUERDA" para movimentar a rainha
         break;
 
 
         case 7:
-        do{
-            printf("FRENTE\n");// caso o usuário escolha a opção "FRENTE" para movimentar a rainha
-            r1++;
-        } while (r1 <8);
-
+        movimentoRainha("FRENTE");// caso o usuário escolha a opção "FRENTE" para movimentar a rainha
         break;
 
 
         case 8:
-        do{
-            printf("TRÁS\n");// caso o usuário escolha a opção "TRÁS" para movimentar a rainha
-            r1++;
-        } while (r1 <8);
-
+        movimentoRainha("TRÁS");// caso o usuário escolha a opção "TRÁS" para movimentar a rainha
         break;
 
         default:
@@ -211,11 +164,10 @@ int main() {
     printf("8- ESQUERDA, ESQUERDA, BAIXO\n");
     printf("9- BAIXO, BAIXO, DIREITA\n");
     printf("10- BAIXO, BAIXO, ESQUERDA\n");
-    scanf("%d", &cavalo);//solicita que usuário escolha de 1a 10
+    scanf("%d", &cavalo);
 
     switch (cavalo) {
 
-        // caso o usuário escolha a opção 1 (CIMA, CIMA, DIREITA)
         case 1:
             while (c1 -- ) {
                 for (int i =0; i < 2; i++ ){
@@ -227,7 +179,7 @@ int main() {
         
         break;
 
-        // caso o usuário escolha a opção 2 (CIMA, CIMA, ESQUERDA)
+
         case 2:
             while (c1 -- ) {
                 for (int i =0; i < 2; i++ ){
@@ -240,7 +192,7 @@ int main() {
         break;
 
 
-        // caso o usuário escolha a opção 3 (BAIXO, BAIXO, DIREITA)
+
         case 3:
             while (c1 -- ) {
                 for (int i =0; i < 2; i++ ){
@@ -251,7 +203,7 @@ int main() {
             printf("DIREITA\n");}
         break;
 
-        // caso o usuário escolha a opção 4 (BAIXO, BAIXO, ESQUERDA)
+
         case 4:
             while (c1 -- ) {
                 for (int i =0; i < 2; i++ ){
@@ -262,7 +214,7 @@ int main() {
             printf("ESQUERDA\n");}
         break;
 
-        // caso o usuário escolha a opção 5 (DIREITA, DIREITA, CIMA)
+
          case 5:
             while (c1 -- ) {
                 for (int i =0; i < 2; i++ ){
@@ -273,7 +225,7 @@ int main() {
             printf("CIMA\n");}
         break;
 
-        // caso o usuário escolha a opção 6 (DIREITA, DIREITA, BAIXO)
+
         case 6:
             while (c1 -- ) {
                 for (int i =0; i < 2; i++ ){
@@ -284,7 +236,7 @@ int main() {
             printf("BAIXO\n");}
         break;
 
-        // caso o usuário escolha a opção 7 (ESQUERDA, ESQUERDA, CIMA)
+
         case 7:
             while (c1 -- ) {
                 for (int i =0; i < 2; i++ ){
@@ -295,7 +247,7 @@ int main() {
             printf("CIMA\n");}
         break;
 
-        // caso o usuário escolha a opção 8 (ESQUERDA, ESQUERDA, BAIXO)
+
         case 8:
             while (c1 -- ) {
                 for (int i =0; i < 2; i++ ){
@@ -306,7 +258,7 @@ int main() {
             printf("BAIXO\n");}
         break;
 
-        // caso o usuário escolha a opção 9 (BAIXO, BAIXO, DIREITA)
+
         case 9:
             while (c1 -- ) {
                 for (int i =0; i < 2; i++ ){
@@ -317,7 +269,7 @@ int main() {
             printf("DIREITA\n");};
         break;
 
-        // caso o usuário escolha a opção 10 (BAIXO, BAIXO, ESQUERDA)
+
         case 10:
             while (c1 -- ) {
                 for (int i =0; i < 2; i++ ){
